@@ -17,7 +17,7 @@ composer require analyticsface/yii2-morphy:*
 or add
 
 ```json
-"analyticsface/yii2-morphy" : "*"
+"analyticsface/yii2-morphy" : "~1.0"
 ```
 
 to the require section of your application's `composer.json` file.
