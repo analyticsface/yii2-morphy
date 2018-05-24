@@ -10,7 +10,7 @@ set.
 
 
 ```json
-"analyticsface/yii2-morphy" : "~1.0"
+"analyticsface/yii2-morphy" : "~1.1"
 ```
 
 to the require section of your application's `composer.json` file.
