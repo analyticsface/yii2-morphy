@@ -9,13 +9,6 @@ composer-asset-plugin, which is also a dependency for yii2 – so if you have yi
 set.
 
 
-Either run
-
-```
-composer require analyticsface/yii2-morphy:*
-```
-or add
-
 ```json
 "analyticsface/yii2-morphy" : "~1.0"
 ```
