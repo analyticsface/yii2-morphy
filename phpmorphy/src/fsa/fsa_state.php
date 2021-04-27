@@ -26,7 +26,7 @@ class phpMorphy_Link_Base {
 		$trans,
 		$raw_trans;
 	
-	function phpMorphy_Link_Base(phpMorphy_Fsa_Interface $fsa, $trans, $rawTrans) {
+	function __construct(phpMorphy_Fsa_Interface $fsa, $trans, $rawTrans) {
 		$this->fsa = $fsa;
 		$this->trans = $trans;
 		$this->raw_trans = $rawTrans;
@@ -70,7 +70,7 @@ class phpMorphy_State {
 		$transes,
 		$raw_transes;
 	
-	function phpMorphy_State(phpMorphy_Fsa_Interface $fsa, $index) {
+	function __construct(phpMorphy_Fsa_Interface $fsa, $index) {
 		$this->fsa = $fsa;
 		
 		$this->raw_transes = $fsa->readState($index);

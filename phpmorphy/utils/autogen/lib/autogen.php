@@ -2,7 +2,7 @@
 class Tpl {
     var $dir;
     
-    function Tpl($dir) {
+    function __construct($dir) {
         $this->dir = $dir;
     }
     
@@ -24,7 +24,7 @@ class Helper_Base {
     var $tpl;
     var $storage;
     
-    function Helper_Base($tpl, $storage) {
+    function __construct($tpl, $storage) {
         $this->tpl = $tpl;
         $this->storage = $storage;
     }
