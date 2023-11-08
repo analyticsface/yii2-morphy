@@ -891,27 +891,27 @@ class phpMorphy_WordDescriptor_Collection implements Countable, IteratorAggregat
         return $result;
     }
     
-    function offsetExists($off) {
+    #[ReturnTypeWillChange] function offsetExists($off) {
         return isset($this->descriptors[$off]);
     }
     
-    function offsetUnset($off) {
+    #[ReturnTypeWillChange] function offsetUnset($off) {
         throw new phpMorphy_Exception(__CLASS__ . " is not mutable");
     }
     
-    function offsetSet($off, $value) {
+    #[ReturnTypeWillChange] function offsetSet($off, $value) {
         throw new phpMorphy_Exception(__CLASS__ . " is not mutable");
     }
     
-    function offsetGet($off) {
+    #[ReturnTypeWillChange] function offsetGet($off) {
         return $this->getDescriptor($off);
     }
     
-    function count() {
+    #[ReturnTypeWillChange] function count() {
         return count($this->descriptors);
     }
     
-    function getIterator() {
+    #[ReturnTypeWillChange] function getIterator() {
         return new ArrayIterator($this->descriptors);
     }
 }
@@ -1123,29 +1123,29 @@ class phpMorphy_WordDescriptor implements Countable, ArrayAccess, IteratorAggreg
 //        return count($result) ? $result : false;
     }
     
-    function count() {
+    #[ReturnTypeWillChange] function count() {
         return count($this->readAllForms());
     }
     
-    function offsetExists($off) {
+    #[ReturnTypeWillChange] function offsetExists($off) {
         $this->readAllForms();
         
         return isset($this->all_forms[$off]);
     }
     
-    function offsetSet($off, $value) {
+    #[ReturnTypeWillChange] function offsetSet($off, $value) {
         throw new phpMorphy_Exception(__CLASS__ . " is not mutable");
     }
     
-    function offsetUnset($off) {
+    #[ReturnTypeWillChange] function offsetUnset($off) {
         throw new phpMorphy_Exception(__CLASS__ . " is not mutable");
     }
     
-    function offsetGet($off) {
+    #[ReturnTypeWillChange] function offsetGet($off) {
         return $this->getWordForm($off);
     }
     
-    function getIterator() {
+    #[ReturnTypeWillChange] function getIterator() {
         $this->readAllForms();
         
         return new ArrayIterator($this->all_forms);
