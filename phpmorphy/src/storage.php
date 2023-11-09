@@ -24,6 +24,7 @@ define('PHPMORPHY_STORAGE_FILE',    'file');
 define('PHPMORPHY_STORAGE_MEM',     'mem');
 define('PHPMORPHY_STORAGE_SHM',     'shm');
 
+#[AllowDynamicProperties]
 abstract class phpMorphy_Storage {
     protected
         $file_name,

@@ -155,6 +155,7 @@ class phpMorphy_WordDescriptor_Collection_Serializer {
     }
 }
 
+#[AllowDynamicProperties]
 class phpMorphy {
     const RESOLVE_ANCODES_AS_TEXT = 0;
     const RESOLVE_ANCODES_AS_DIALING = 1;

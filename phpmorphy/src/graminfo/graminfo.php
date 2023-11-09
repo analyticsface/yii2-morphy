@@ -85,7 +85,8 @@ interface phpMorphy_GramInfo_Interace {
     function readAllGrammems();
     function readAllAncodes();
 }
- 
+
+#[AllowDynamicProperties]
 abstract class phpMorphy_GramInfo implements phpMorphy_GramInfo_Interace {
     const HEADER_SIZE = 128;
     
@@ -206,6 +207,7 @@ abstract class phpMorphy_GramInfo implements phpMorphy_GramInfo_Interace {
     }
 };
 
+#[AllowDynamicProperties]
 class phpMorphy_GramInfo_Decorator implements phpMorphy_GramInfo_Interace {
     protected $info;
     

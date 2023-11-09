@@ -42,6 +42,7 @@ class phpMorphy_GramTab_Empty implements phpMorphy_GramTab_Interface {
     function toString($partOfSpeechId, $grammemIds) { return ''; }
 }
 
+#[AllowDynamicProperties]
 class phpMorphy_GramTab_Proxy implements phpMorphy_GramTab_Interface {
     protected $storage;
     
@@ -93,6 +94,7 @@ class phpMorphy_GramTab_Proxy implements phpMorphy_GramTab_Interface {
     }
 }
 
+#[AllowDynamicProperties]
 class phpMorphy_GramTab implements phpMorphy_GramTab_Interface {
     protected
         $data,
